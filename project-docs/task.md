@@ -1,0 +1,41 @@
+# Vrindhana Restaurant Website - Frontend Development Tasks
+
+- [/] **Project Setup & Design System**
+    - [x] Initialize Next.js project with Tailwind CSS
+    - [x] Configure Tailwind theme (colors, fonts, glassmorphism utilities)
+    - [x] Install dependencies (Framer Motion, Lucide React, etc.)
+    - [x] Create layout wrapper with sticky navigation and footer
+    - [x] Implement global styles and typography
+- [/] **Public Pages Implementation**
+    - [x] **Home Page**
+        - [x] Hero Section with Parallax & CTA
+        - [x] Featured Menu (Horizontal Scroll)
+        - [x] Weekly Events Preview
+        - [x] Best Sellers & Testimonials
+    - [x] **Menu Page**
+        - [x] Category Tabs & Filters
+        - [x] Food Cards with animations
+        - [x] Search & Cart Drawer
+    - [x] **Events Page**
+        - [x] Event Cards & Details
+        - [x] Booking Modal (Seat selection UI)
+    - [x] **Table Booking Page**
+        - [x] Booking Form (Date, Time, Guest, Table)
+        - [x] Confirmation UI
+- [/] **Core Experience Components**
+    - [x] **Cart & Checkout**
+        - [x] Cart Page / Drawer
+        - [x] Checkout Form & Success Screen
+    - [x] **Authentication**
+        - [x] Login / Register / Forgot Password Pages
+- [/] **Dashboards**
+    - [x] **User Dashboard**
+        - [x] Profile, Order History, Booking History
+    - [x] **Admin Dashboard**
+        - [x] Overview (Stats), Order/Menu/Events Management UI
+    - [x] **Worker Portal**
+        - [x] Order List & Status Toggle
+- [x] **Refinement & Polish**
+    - [x] Mobile Responsiveness Verifications
+    - [x] Accessibility checks
+    - [x] Final Animations & Transitions check
