@@ -57,7 +57,7 @@ export function BestDelivered() {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.6, delay: idx * 0.1 }}
                                 viewport={{ once: true }}
-                                className="w-full max-w-4xl glass-card p-6 flex flex-col md:flex-row items-center gap-8 group hover:bg-white/5 transition-all duration-300"
+                                className="w-full max-w-4xl glass-card p-6 flex flex-col-reverse md:flex-row items-center gap-8 group hover:bg-white/5 transition-all duration-300"
                             >
                                 {/* Text Content */}
                                 <div className={`flex-1 space-y-3 ${item.reverse ? 'md:order-2' : ''}`}>
@@ -103,7 +103,7 @@ export function BestDelivered() {
                                 </div>
 
                                 {/* Image - "Graphic" Style (No Frame) */}
-                                <div className={`w-full md:w-64 relative shrink-0 ${item.reverse ? 'md:order-1' : ''}`}>
+                                <div className={`w-48 mx-auto md:w-64 relative shrink-0 ${item.reverse ? 'md:order-1' : ''}`}>
                                     <img
                                         src={item.image}
                                         alt={item.name}
