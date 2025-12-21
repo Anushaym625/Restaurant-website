@@ -29,18 +29,22 @@ export function AdminEvents() {
                 <h2 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-white/60">
                     Event Management
                 </h2>
-                <div className="flex gap-2 bg-white/5 p-1 rounded-lg">
+                <div className="flex gap-4">
                     <button
                         onClick={() => setActiveTab("events")}
-                        className={`px - 4 py - 2 rounded - md text - sm font - medium transition - all ${activeTab === "events" ? "bg-primary text-white shadow-lg" : "text-white/60 hover:text-white"
-                            } `}
+                        className={`px-6 py-2.5 rounded-lg text-sm font-bold transition-all border ${activeTab === "events"
+                            ? "bg-primary border-primary text-white shadow-lg shadow-primary/20"
+                            : "bg-white/5 border-white/10 text-white/60 hover:text-white hover:bg-white/10"
+                            }`}
                     >
                         Upcoming Events
                     </button>
                     <button
                         onClick={() => setActiveTab("memories")}
-                        className={`px - 4 py - 2 rounded - md text - sm font - medium transition - all ${activeTab === "memories" ? "bg-primary text-white shadow-lg" : "text-white/60 hover:text-white"
-                            } `}
+                        className={`px-6 py-2.5 rounded-lg text-sm font-bold transition-all border ${activeTab === "memories"
+                            ? "bg-primary border-primary text-white shadow-lg shadow-primary/20"
+                            : "bg-white/5 border-white/10 text-white/60 hover:text-white hover:bg-white/10"
+                            }`}
                     >
                         Event Memories
                     </button>
