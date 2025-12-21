@@ -163,7 +163,7 @@ const founders = [
         quote: "With a deep passion for vegetarian cuisine and hospitality, Vinay envisioned a dining experience that combines authentic flavors, serene ambience, and mindful living. Every detail — from the menu to the interiors — reflects this philosophy."
     },
     {
-        name: "Yashu Navi Nandan",
+        name: "unknown ",
         image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=1000&auto=format&fit=crop",
         quote: "We believe in the power of mindfulness. Every detail, from our ingredients to our interiors, is curated to reflect a lifestyle of peace and simple elegance."
     }
