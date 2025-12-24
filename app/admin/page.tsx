@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { BarChart, Users, ShoppingBag, DollarSign, Calendar, Settings, Edit, Bell, LogOut, LayoutDashboard, Ticket } from "lucide-react";
+import { BarChart, Users, ShoppingBag, DollarSign, Calendar, Settings, Edit, Bell, LogOut, LayoutDashboard, Ticket, Star } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/context/AuthContext";
 import { useRouter } from "next/navigation";
@@ -13,6 +13,7 @@ import { AdminProfile } from "@/components/admin/AdminProfile";
 import { AdminOrders } from "@/components/admin/AdminOrders";
 import { AdminNotifications } from "@/components/admin/AdminNotifications";
 import { AdminEvents } from "@/components/admin/AdminEvents";
+import { AdminSpecial } from "@/components/admin/AdminSpecial";
 
 export default function AdminDashboard() {
     const [activeTab, setActiveTab] = useState("overview");
@@ -52,6 +53,7 @@ export default function AdminDashboard() {
                         { id: "orders", icon: ShoppingBag, label: "Orders" },
                         { id: "menu", icon: Edit, label: "Menu Management" },
                         { id: "events", icon: Ticket, label: "Events" },
+                        { id: "special", icon: Star, label: "Today's Special" },
                         { id: "bookings", icon: Calendar, label: "Reservations" },
                         { id: "settings", icon: Settings, label: "Settings" },
                         { id: "profile", icon: Users, label: "Profile" },
@@ -98,6 +100,7 @@ export default function AdminDashboard() {
                 {activeTab === "orders" && <AdminOrders />}
                 {activeTab === "menu" && <AdminMenuManagement />}
                 {activeTab === "events" && <AdminEvents />}
+                {activeTab === "special" && <AdminSpecial />}
                 {activeTab === "bookings" && <AdminReservations />}
                 {activeTab === "settings" && <AdminSettings />}
                 {activeTab === "profile" && <AdminProfile />}
