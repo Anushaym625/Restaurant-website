@@ -3,36 +3,13 @@
 import { motion } from "framer-motion";
 import { ArrowRight, ShoppingBag, Plus, Minus } from "lucide-react";
 import { useCart } from "@/context/CartContext";
-
-const DELIVERED_ITEMS = [
-    {
-        id: "101",
-        name: "Special Masala Dosa",
-        description: "Crispy golden crepe filled with spiced potato mash, served with coconut chutney and sambar.",
-        price: 120,
-        image: "/masala-dosa.png",
-        reverse: false
-    },
-    {
-        id: "102",
-        name: "Idli Vada Combo",
-        description: "Steamed fluffy rice cakes and crispy lentil donuts, the perfect traditional breakfast duo.",
-        price: 90,
-        image: "/idli-vada.png",
-        reverse: true
-    },
-    {
-        id: "103",
-        name: "Hyderabadi Veg Biryani",
-        description: "Aromatic basmati rice cooked with fresh vegetables and exotic spices in traditional dum style.",
-        price: 240,
-        image: "/veg-biryani.jpg",
-        reverse: false
-    }
-];
+import { useBestDelivered } from "@/context/BestDeliveredContext";
 
 export function BestDelivered() {
-    const { addToCart, items, updateQty, removeFromCart } = useCart();
+    const { addToCart, items: cartItems, updateQty } = useCart();
+    const { items: deliveredItems } = useBestDelivered();
+
+    if (!deliveredItems || deliveredItems.length === 0) return null;
 
     return (
         <section className="py-20 relative">
@@ -45,8 +22,8 @@ export function BestDelivered() {
                 </div>
 
                 <div className="space-y-12 flex flex-col items-center">
-                    {DELIVERED_ITEMS.map((item, idx) => {
-                        const cartItem = items.find(i => i.id === item.id);
+                    {deliveredItems.map((item, idx) => {
+                        const cartItem = cartItems.find(i => i.id === item.id);
                         // Stagger from left (-50) or right (50) based on index
                         const xOffset = idx % 2 === 0 ? -50 : 50;
 
